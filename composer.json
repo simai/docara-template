@@ -1,0 +1,31 @@
+{
+    "name": "simai/docara-template",
+    "description": "Starter documentation project for Docara and GitHub Codespaces.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "simai/docara": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/simai/docara",
+            "no-api": true
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "source/"
+        }
+    },
+    "scripts": {
+        "docs:create": "php bin/docs-create.php"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "Docara Documentation Template",
+    "image": "mcr.microsoft.com/devcontainers/php:1-8.3-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        }
+    },
+    "postCreateCommand": "composer install && DOCARA_SKIP_FRONTEND_INSTALL=true php vendor/bin/docara init --update && node scripts/configure-template.js && corepack enable && corepack prepare yarn@1.22.22 --activate && yarn install && yarn prod",
+    "postAttachCommand": "yarn start",
+    "forwardPorts": [
+        3000,
+        8000
+    ],
+    "portsAttributes": {
+        "3000": {
+            "label": "Docara live preview",
+            "onAutoForward": "openPreview"
+        },
+        "8000": {
+            "label": "Docara static preview",
+            "onAutoForward": "notify"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "dbaeumer.vscode-eslint",
+                "xdebug.php-debug"
+            ]
+        }
+    }
+}
