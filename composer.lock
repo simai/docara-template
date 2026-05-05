@@ -2618,12 +2618,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simai/docara",
-                "reference": "7dbfc642cfd4466e6d970b64931c5a605b8a4789"
+                "reference": "a061960f4848ed97977096bf29f67659d837024b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simai/docara/zipball/7dbfc642cfd4466e6d970b64931c5a605b8a4789",
-                "reference": "7dbfc642cfd4466e6d970b64931c5a605b8a4789",
+                "url": "https://api.github.com/repos/simai/docara/zipball/a061960f4848ed97977096bf29f67659d837024b",
+                "reference": "a061960f4848ed97977096bf29f67659d837024b",
                 "shasum": ""
             },
             "require": {
@@ -2705,7 +2705,7 @@
                 "site",
                 "static"
             ],
-            "time": "2026-05-05T07:25:21+00:00"
+            "time": "2026-05-05T07:54:41+00:00"
         },
         {
             "name": "spatie/backtrace",
