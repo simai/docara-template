@@ -19,17 +19,14 @@ packageJson.private = true;
 
 packageJson.scripts = {
     ...packageJson.scripts,
-    start: 'yarn dev && concurrently -k -n content,assets "php vendor/bin/docara build local --watch" "mix watch"',
+    start: 'mix watch',
     serve: 'php vendor/bin/docara serve local --host=0.0.0.0 --port=8000',
     'serve:local': 'php vendor/bin/docara serve local --host=localhost --port=8000',
     build: 'php vendor/bin/docara build local',
     'translate:test': 'php vendor/bin/docara translate --test',
 };
 
-packageJson.devDependencies = {
-    ...packageJson.devDependencies,
-    concurrently: '^9.2.1',
-};
+delete packageJson.devDependencies?.concurrently;
 
 delete packageJson.scripts.postinstall;
 
