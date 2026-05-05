@@ -19,7 +19,7 @@ packageJson.private = true;
 
 packageJson.scripts = {
     ...packageJson.scripts,
-    start: 'concurrently -k -n content,assets "php vendor/bin/docara build local --watch" "mix watch"',
+    start: 'yarn dev && concurrently -k -n content,assets "php vendor/bin/docara build local --watch" "mix watch"',
     serve: 'php vendor/bin/docara serve local --host=0.0.0.0 --port=8000',
     'serve:local': 'php vendor/bin/docara serve local --host=localhost --port=8000',
     build: 'php vendor/bin/docara build local',
